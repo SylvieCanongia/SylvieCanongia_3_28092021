@@ -1,6 +1,12 @@
-
 .main {
   .location__content {
     background: $grey-background-light;
+  }
+
+  // Display of the item number in functioning section
+   .functioning__list__item {
+    $listItemNumbers:(1:"1", 2:"2", 3:"3");
+
+    @include listItemPosition($listItemNumbers);
   }
 }

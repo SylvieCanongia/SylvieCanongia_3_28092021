@@ -1,0 +1,15 @@
+@mixin listItemPosition($listItemNumbers) {
+  @each $itemPosition, $itemNumber in $listItemNumbers {
+    &--#{$itemPosition}::before {
+      content: $itemNumber;
+      position: absolute;
+      background: $col-primary;
+      width:  $size-S;
+      height:  $size-S;
+      border-radius: $radius-L;
+      color: $col-white;
+      display: grid;
+      place-items: center;
+    }
+  } 
+}
