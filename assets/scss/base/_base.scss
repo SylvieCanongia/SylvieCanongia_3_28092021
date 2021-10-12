@@ -8,7 +8,8 @@ body {
     height: 100%;
     font-family: $font-family-text;
     font-size: $font-size-base;
-    line-height: 1.2;
+    line-height: 1.4;
+    font-weight: 400; // regular
 }
 
 /* disable the instant scrolling for users you have configured

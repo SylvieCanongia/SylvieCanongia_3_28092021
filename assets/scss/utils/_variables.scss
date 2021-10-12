@@ -8,6 +8,8 @@
     /* Grays */
     $col-black: hsl(0deg, 0%, 0%);
     $col-white: hsl(0deg, 0%, 100%);
+    $grey-background-light: hsl(0, 0%, 95%);
+    $grey-border: hsl(0, 0%, 85%);
 
     /* ====== TYPOGRAPHY ====== */
     $font-size-base: 1em;
@@ -19,6 +21,7 @@
     $font-size-XXL: 2rem;
 
     /* ====== FONT WEIGHT ====== */
+    $font-weight-thin: 100;
     $font-weight-regular: 400;
     $font-weight-bold: 700;
 

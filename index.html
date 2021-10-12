@@ -23,11 +23,51 @@
 
     <!-- Fonts -->
 
-    <!-- CSS Files -->
+    <!-- CSS / SCSS Files -->
     <link rel="stylesheet" href="./assets/scss/main.scss" />
   </head>
 
   <body>
-    <h1>Ohmyfood</h1>
+    <!-- ======= Header ======= -->
+    <header class="header">
+      <img src="~/assets/images/logo/ohmyfood.png" alt="Ohmyfood" />
+    </header>
+    <!-- End header -->
+
+    <!-- ======= Main ======= -->
+    <main class="main">
+      <!-- Section location -->
+      <section class="location">
+        <div class="location__form__wrapper">
+          <form role="search" class="location__form">
+            <i class="fas fa-map-marker-alt"></i>
+            <input
+              type="text"
+              class="location__form__input"
+              id=""
+              placeholder="Paris, Belleville"
+              aria-label="Rechercher un restaurant"
+              value="Paris, Belleville"
+            />
+          </form>
+        </div>
+
+        <div class="location__content">
+          <h2 class="location__content__heading">
+            Réservez le menu qui vous convient
+          </h2>
+
+          <p class="location__content__description">
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
+
+          <button type="button" class="location__content__button">
+            <span class="button__explore">Explorez nos restaurants</span>
+          </button>
+        </div>
+      </section>
+      <!-- End Section location -->
+      
+    </main>
   </body>
 </html>
