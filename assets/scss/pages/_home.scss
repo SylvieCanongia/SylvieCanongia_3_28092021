@@ -4,9 +4,15 @@
   }
 
   // Display of the item number in functioning section
-   .functioning__list__item {
-    $listItemNumbers:(1:"1", 2:"2", 3:"3");
+  .functioning__list__item {
+    $listItemNumbers: (1:"1", 2:"2", 3:"3");
 
     @include listItemPosition($listItemNumbers);
+  }
+
+  .restaurants__cardImg {
+    height: 180px;
+    width: 100%;
+    object-fit: cover;
   }
 }
