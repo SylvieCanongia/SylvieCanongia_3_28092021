@@ -1,15 +1,21 @@
+// Display of the item number in the list
+
 @mixin listItemPosition($listItemNumbers) {
-  @each $itemPosition, $itemNumber in $listItemNumbers {
+
+  @each $itemPosition,
+  $itemNumber in $listItemNumbers {
     &--#{$itemPosition}::before {
       content: $itemNumber;
       position: absolute;
+      left: 0;
       background: $col-primary;
-      width:  $size-S;
-      height:  $size-S;
+      width: $size-number;
+      height: $size-number;
       border-radius: $radius-L;
       color: $col-white;
       display: grid;
       place-items: center;
+      font-size: $font-size-S;
     }
-  } 
+  }
 }

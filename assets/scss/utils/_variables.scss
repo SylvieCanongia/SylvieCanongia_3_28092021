@@ -3,64 +3,72 @@
   $widthWrapper: 24px;
   /* max-width 1500px */
   $maxWidth: 93.75rem;
- 
- /* ====== COLOR PALETTE ====== */
 
-    /* Blue */
-    $col-primary: hsl(267, 66%, 60%); // #9356DC
-    $col-secondary: hsl(317, 100%, 74%); // #FF79DA
-    $col-tertiary: hsl(165, 56%, 74%); // #99E2D0
+  /* ====== COLOR PALETTE ====== */
 
-    /* Grays */
-    $col-black: hsl(0deg, 0%, 0%);
-    $col-white: hsl(0deg, 0%, 100%);
-    $grey-background-light: hsl(0, 0%, 95%);
-    $grey-background-medium: hsl(0, 0%, 92%);
-    $grey-background-dark: hsl(0, 0%, 21%);
-    $grey-border: hsl(0, 0%, 80%);
+  /* Blue */
+  $col-primary: hsl(267, 66%, 60%); // #9356DC
+  $col-secondary: hsl(317, 100%, 74%); // #FF79DA
+  $col-tertiary: hsl(165, 56%, 74%); // #99E2D0
 
-     /* Gradients */
-     $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
+  /* Grays */
+  $col-black: hsl(0deg, 0%, 0%);
+  $col-white: hsl(0deg, 0%, 100%);
+  $grey-background-light: hsl(0, 0%, 96%);
+  $grey-background-medium: hsl(0, 0%, 92%);
+  $grey-background-dark: hsl(0, 0%, 21%);
+  $grey-border: hsl(0, 0%, 80%);
+  $grey-shadow: hsl(0, 0%, 85%);
+  $grey-icon: hsl(0, 0%, 49%);
 
-    /* ====== TYPOGRAPHY ====== */
-    $font-size-base: 1em;
+  $purple-light-background: hsl(268, 89%, 96%);
 
-    $font-size-S: 0.9rem;
-    $font-size-M: 1rem;
-    $font-size-L: 1.1rem;
-    $font-size-XL: 1.4rem;
-    $font-size-XXL: 1.8rem;
+  /* Gradients */
+  $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
 
-    /* ====== FONT WEIGHT ====== */
-    $font-weight-thin: 100;
-    $font-weight-regular: 400;
-    $font-weight-bold: 700;
+  /* ====== TYPOGRAPHY ====== */
+  $font-size-base: 1em;
 
-    /* ====== FONT-FAMILY ====== */
-    $font-family-title: 'Shrikhand', cursive;
-    $font-family-text: 'Roboto', sans-serif;
+  $font-size-S: 0.9rem;
+  $font-size-M: 1rem;
+  $font-size-L: 1.1rem;
+  $font-size-XL: 1.4rem;
+  $font-size-XXL: 1.8rem;
 
-    /* ====== SPACING ====== */
-    $space-base: 8px;
-    $space-XS: 16px;
-    $space-S: 24px;
-    $space-M: 32px;
-    $space-L: 40px;
-    $space-XL: 48px;
+  /* ====== FONT WEIGHT ====== */
+  $font-weight-thin: 100;
+  $font-weight-regular: 400;
+  $font-weight-bold: 700;
 
-    /* ====== SIZES (HEIGHT, WIDTH) ====== */
-    $size-XXS: 8px;
-    $size-XS: 16px;
-    $size-S: 24px;
-    $size-M: 32px;
-    $size-L: 40px;
-    $size-XL: 48px;
-    $size-XXL: 80px;
+  /* ====== FONT-FAMILY ====== */
+  $font-family-title: 'Shrikhand',
+  cursive;
+  $font-family-text: 'Roboto',
+  sans-serif;
 
-    /* ====== RADIUS ====== */
+  /* ====== SPACING ====== */
+  $space-base: 8px;
+  $space-XS: 16px;
+  $space-S: 24px;
+  $space-M: 32px;
+  $space-L: 40px;
+  $space-XL: 48px;
 
-    $radius-cercle: 50%;
-    $radius-S: 5px;
-    $radius-M: 16px;
-    $radius-L: 24px;
-    $radius-XL: 48px;
+  /* ====== SIZES (HEIGHT, WIDTH) ====== */
+  $size-XXS: 8px;
+  $size-XS: 16px;
+  $size-S: 24px;
+  $size-M: 32px;
+  $size-L: 40px;
+  $size-XL: 48px;
+  $size-XXL: 72px;
+
+  $size-number: $size-S * 0.9;
+
+  /* ====== RADIUS ====== */
+
+  $radius-cercle: 50%;
+  $radius-S: 5px;
+  $radius-M: 16px;
+  $radius-L: 24px;
+  $radius-XL: 48px;
