@@ -1,14 +1,46 @@
 .main {
-  .location__content {
-    background: $grey-background-light;
+
+  // ==== Section location ====
+  .location {
+    &__form__wrapper {
+      background: $grey-background-medium;
+      display: grid;
+      box-shadow: inset 2px 2px 5px $grey-border;
+    }
+
+    &__form {
+      margin-inline: auto;
+      width: 170px;
+
+      i {
+        font-size: $font-size-L;
+      }
+
+      input {
+        border: transparent;
+        background: transparent;
+        height: $size-XL;
+        width: 150px;
+        font-size: $font-size-M;
+        padding-inline: $space-base * 1.5;
+      }
+    }
+
+    &__content {
+      background: $grey-background-light;
+    }
   }
 
-  // Display of the item number in functioning section
+  //  ==== Section functioning ====
+
+  // Display of the item number of the list in the functioning section
   .functioning__list__item {
     $listItemNumbers: (1:"1", 2:"2", 3:"3");
 
     @include listItemPosition($listItemNumbers);
   }
+
+  // ==== Section restaurants ====
 
   .restaurants__cardImg {
     height: 180px;
