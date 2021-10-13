@@ -1,3 +1,9 @@
+  /*  ====== PAGE WRAPPER ====== */
+
+  $widthWrapper: 24px;
+  /* max-width 1500px */
+  $maxWidth: 93.75rem;
+ 
  /* ====== COLOR PALETTE ====== */
 
     /* Blue */
@@ -13,6 +19,9 @@
     $grey-background-dark: hsl(0, 0%, 21%);
     $grey-border: hsl(0, 0%, 80%);
 
+     /* Gradients */
+     $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
+
     /* ====== TYPOGRAPHY ====== */
     $font-size-base: 1em;
 
@@ -20,7 +29,7 @@
     $font-size-M: 1rem;
     $font-size-L: 1.1rem;
     $font-size-XL: 1.4rem;
-    $font-size-XXL: 2rem;
+    $font-size-XXL: 1.8rem;
 
     /* ====== FONT WEIGHT ====== */
     $font-weight-thin: 100;
@@ -54,4 +63,4 @@
     $radius-S: 5px;
     $radius-M: 16px;
     $radius-L: 24px;
-    $radius-XL: 32px;
+    $radius-XL: 48px;

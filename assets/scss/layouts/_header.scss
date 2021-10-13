@@ -1,4 +1,8 @@
 .header {
+  
+  &Logo__wrapper {
+    margin-inline: $widthWrapper;
+  }
 
   img {
     width: 170px;

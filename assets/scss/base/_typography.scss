@@ -3,6 +3,12 @@ h1 {
   font-family: $font-family-title;
 }
 
+h2 {
+  font-size: $font-size-XL*1.1;
+  font-weight: $font-weight-bold;
+}
+
 p {
   font-weight: 100;
+  font-size: $font-size-base * 1.1;
 }

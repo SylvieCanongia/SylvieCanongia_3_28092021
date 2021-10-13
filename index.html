@@ -25,34 +25,39 @@
 <body>
   <!-- ======= Header ======= -->
   <header class="header">
-    <img src="~/assets/images/logo/ohmyfood.png" alt="Ohmyfood" />
-  </header>
+    <div class="headerLogo__wrapper">
+      <img src="~/assets/images/logo/ohmyfood.png" alt="Ohmyfood" />
+    </div>
+    </header>
   <!-- =======End header ======= -->
 
   <!-- ======= Main ======= -->
   <main class="main">
     <!-- Section location -->
     <section class="location">
-      <div class="location__form__wrapper">
+      <div class="location__form__backgroundWrapper">
         <form role="search" class="location__form">
+          <div class="location__form__searchBarWrapper">
           <i class="fas fa-map-marker-alt"></i>
           <input type="text" id="" placeholder="Paris, Belleville" aria-label="Rechercher un restaurant"
             value="Paris, Belleville" />
-        </form>
+          </div>
+          </form>
       </div>
+      <div class="location__content__backgroundWrapper">
+        <div class="location__content">
+          <h2 class="location__content__heading">
+            Réservez le menu qui vous convient
+          </h2>
 
-      <div class="location__content">
-        <h2 class="location__content__heading">
-          Réservez le menu qui vous convient
-        </h2>
+          <p class="location__content__description">
+            Découvrez des restaurants d'exception, sélectionnés par nos soins.
+          </p>
 
-        <p class="location__content__description">
-          Découvrez des restaurants d'exception, sélectionnés par nos soins.
-        </p>
-
-        <button type="button" class="location__content__button">
-          <span class="button__explore">Explorer nos restaurants</span>
-        </button>
+          <button type="button" class="location__content__button">
+            <span class="button__explore">Explorer nos restaurants</span>
+          </button>
+        </div>
       </div>
     </section>
     <!-- End section location -->
