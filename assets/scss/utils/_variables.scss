@@ -11,17 +11,19 @@
   $col-secondary: hsl(317, 100%, 74%); // #FF79DA
   $col-tertiary: hsl(165, 56%, 74%); // #99E2D0
 
+  $col-green-text: hsl(166, 100%, 26%);
+
   /* Grays */
   $col-black: hsl(0deg, 0%, 0%);
   $col-white: hsl(0deg, 0%, 100%);
-  $grey-background-light: hsl(0, 0%, 96%);
-  $grey-background-medium: hsl(0, 0%, 92%);
-  $grey-background-dark: hsl(0, 0%, 21%);
-  $grey-border: hsl(0, 0%, 80%);
-  $grey-shadow: hsl(0, 0%, 85%);
-  $grey-icon: hsl(0, 0%, 49%);
+  $col-grey-background-light: hsl(0, 0%, 96%);
+  $col-grey-background-medium: hsl(0, 0%, 92%);
+  $col-grey-background-dark: hsl(0, 0%, 21%);
+  $col-grey-border: hsl(0, 0%, 80%);
+  $col-grey-shadow: hsl(0, 0%, 85%);
+  $col-grey-icon: hsl(0, 0%, 49%);
 
-  $purple-light-background: hsl(268, 89%, 96%);
+  $col-purple-light-background: hsl(268, 89%, 96%);
 
   /* Gradients */
   $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);

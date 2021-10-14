@@ -1,3 +1,6 @@
+// To be able to use math.div
+@use "sass:math";
+
 .main {
   // ==== Section location ====
 
@@ -5,12 +8,12 @@
     // ---- Location form ----
 
     &__form__backgroundWrapper {
-      background: $grey-background-medium;
-      box-shadow: inset 2px 2px 5px $grey-border;
+      background: $col-grey-background-medium;
+      box-shadow: inset 2px 2px 5px $col-grey-border;
     }
 
     &__form {
-      margin-inline: $widthWrapper;
+      padding-inline: $widthWrapper;
 
       &__searchBarWrapper {
         margin-inline: auto;
@@ -34,11 +37,11 @@
     // ---- Location content ----
 
     &__content__backgroundWrapper {
-      background: $grey-background-light;
+      background: $col-grey-background-light;
     }
 
     &__content {
-      margin-inline: $widthWrapper;
+      padding-inline: $widthWrapper;
       padding-block-start: $space-L;
       padding-block-end: $space-L * 1.3;
       display: flex;
@@ -68,7 +71,7 @@
         border: transparent;
         border-radius: $radius-XL;
         font-weight: $font-weight-bold;
-        box-shadow: 2px 2px 5px 4px $grey-shadow;
+        box-shadow: 2px 2px 5px 4px $col-grey-shadow;
         cursor: pointer;
       }
 
@@ -81,7 +84,7 @@
   //  ==== Section functioning ====
 
   .functioning {
-    margin-inline: $widthWrapper;
+    padding-inline: $widthWrapper;
     padding-block-start: $space-L;
     padding-block-end: $space-L * 1.3;
 
@@ -111,25 +114,25 @@
       display: flex;
       align-items: center;
       // $size-number is the width of the number of the li ($size-S * 0.9)
-      margin-inline: $size-number / 2;
+      margin-inline: math.div($size-number, 2);
       height: $size-XXL;
-      background: $grey-background-light;
+      background: $col-grey-background-light;
       border-radius: $radius-L;
       margin-block-end: $space-S;
-      box-shadow: 2px 2px 10px 2px $grey-shadow;
+      box-shadow: 2px 2px 10px 2px $col-grey-shadow;
 
       &:last-child {
         margin-block-end: revert;
-        background: $purple-light-background;
+        background: $col-purple-light-background;
       }
 
       i {
         font-size: $font-size-L;
-        color: $grey-icon;
+        color: $col-grey-icon;
         padding-inline-start: $space-M;
         // Padding end equal to the start less half the width of the number
         // to have an equal distance before and after the icon
-        padding-inline-end: $space-M - $size-number / 2;
+        padding-inline-end: $space-M - math.div($size-number, 2);
       }
 
       &:last-child i {
@@ -140,9 +143,102 @@
 
   // ==== Section restaurants ====
 
-  .restaurants__cardImg {
-    height: 180px;
-    width: 100%;
-    object-fit: cover;
+  .restaurants {
+    padding-inline: $widthWrapper;
+    background: $col-grey-background-light;
+    padding-block-start: $space-L;
+    padding-block-end: $space-L * 1.3;
+
+    &__heading {
+      margin-block-end: $space-M;
+    }
+
+    &__cards {
+      display: grid;
+      gap: $space-XS;
+      grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr))
+    }
+
+    &__card__wrapper {
+      // radius around the card image
+      border-radius: $radius-L;
+      box-shadow: 1px 1px 10px 2px $col-grey-shadow;
+    }
+
+    &__card {
+      display: grid;
+      grid-template-areas:
+        'image'
+        'heading'
+        'description';
+      background-color: $col-white;
+      border-radius: $radius-L;
+      position: relative;
+
+      // restaurants card img
+      &Img,
+      &Img__container {
+        border-start-start-radius: $radius-L;
+        border-start-end-radius: $radius-L;
+      }
+
+      &Img__container.new {
+        &::before {
+          content: "Nouveau";
+          position: absolute;
+          top: 5%;
+          right: 5%;
+          width: 75px;
+          height: 27px;
+          color: $col-green-text;
+          background-color: $col-tertiary;
+          border-radius: $radius-S * 0.5;
+          display: grid;
+          place-items: center;
+          font-size: $font-size-S;
+        }
+      }
+
+      &Img {
+        height: 165px;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+      }
+
+      // centering of the 2nd img
+      &__wrapper:nth-child(2) img {
+        object-position: 50% 60%;
+      }
+
+      // Card heading, heart and description
+      &__content__wrapper {
+        padding-inline: $space-XS;
+      }
+
+      &Heading {
+        padding-block-start: $space-base * 1.5;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        span {
+          z-index: 2;
+        }
+
+        // heart to click
+        img.heart {
+          width: 25px;
+          position: relative;
+          bottom: -6px;
+          margin-inline-end: $space-base;
+          z-index: 3;
+        }
+      }
+
+      &Description {
+        padding-block-end: $space-XS;
+      }
+    }
   }
 }
