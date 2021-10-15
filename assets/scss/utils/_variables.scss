@@ -1,76 +1,94 @@
-  /*  ====== PAGE WRAPPER ====== */
+// To be able to use math.div
+@use "sass:math";
 
-  $widthWrapper: 24px;
-  /* max-width 1500px */
-  $maxWidth: 93.75rem;
+/*  ====== PAGE WRAPPER ====== */
 
-  /* ====== COLOR PALETTE ====== */
+$widthWrapper: 24px;
+/* max-width 1500px */
+$maxWidth: 93.75rem;
 
-  /* Blue */
-  $col-primary: hsl(267, 66%, 60%); // #9356DC
-  $col-secondary: hsl(317, 100%, 74%); // #FF79DA
-  $col-tertiary: hsl(165, 56%, 74%); // #99E2D0
+/* ====== COLOR PALETTE ====== */
 
-  $col-green-text: hsl(166, 100%, 26%);
+/* Blue */
+$col-primary: hsl(267, 66%, 60%); // #9356DC
+$col-secondary: hsl(317, 100%, 74%); // #FF79DA
+$col-tertiary: hsl(165, 56%, 74%); // #99E2D0
 
-  /* Grays */
-  $col-black: hsl(0deg, 0%, 0%);
-  $col-white: hsl(0deg, 0%, 100%);
-  $col-grey-background-light: hsl(0, 0%, 96%);
-  $col-grey-background-medium: hsl(0, 0%, 92%);
-  $col-grey-background-dark: hsl(0, 0%, 21%);
-  $col-grey-border: hsl(0, 0%, 80%);
-  $col-grey-shadow: hsl(0, 0%, 85%);
-  $col-grey-icon: hsl(0, 0%, 49%);
+$col-green-text: hsl(166, 100%, 26%);
 
-  $col-purple-light-background: hsl(268, 89%, 96%);
+/* Grays */
+$col-black: hsl(0deg, 0%, 0%);
+$col-white: hsl(0deg, 0%, 100%);
+$col-grey-background-light: hsl(0, 0%, 96%);
+$col-grey-background-medium: hsl(0, 0%, 92%);
+$col-grey-background-dark: hsl(0, 0%, 21%);
+$col-grey-border: hsl(0, 0%, 80%);
+$col-grey-shadow: hsl(0, 0%, 85%);
+$col-grey-icon: hsl(0, 0%, 49%);
 
-  /* Gradients */
-  $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
+$col-purple-light-background: hsl(268, 89%, 96%);
 
-  /* ====== TYPOGRAPHY ====== */
-  $font-size-base: 1em;
+/* Gradients */
+$gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
 
-  $font-size-S: 0.9rem;
-  $font-size-M: 1rem;
-  $font-size-L: 1.1rem;
-  $font-size-XL: 1.4rem;
-  $font-size-XXL: 1.8rem;
+/* ====== TYPOGRAPHY ====== */
+$font-size-base: 1em;
 
-  /* ====== FONT WEIGHT ====== */
-  $font-weight-thin: 100;
-  $font-weight-regular: 400;
-  $font-weight-bold: 700;
+$font-size-S: 0.9rem;
+$font-size-M: 1rem;
+$font-size-L: 1.1rem;
+$font-size-XL: 1.4rem;
+$font-size-XXL: 1.8rem;
 
-  /* ====== FONT-FAMILY ====== */
-  $font-family-title: 'Shrikhand',
-  cursive;
-  $font-family-text: 'Roboto',
-  sans-serif;
+/* ====== FONT WEIGHT ====== */
+$font-weight-thin: 100;
+$font-weight-regular: 400;
+$font-weight-bold: 700;
 
-  /* ====== SPACING ====== */
-  $space-base: 8px;
-  $space-XS: 16px;
-  $space-S: 24px;
-  $space-M: 32px;
-  $space-L: 40px;
-  $space-XL: 48px;
+/* ====== FONT-FAMILY ====== */
+$font-family-title: 'Shrikhand',
+cursive;
+$font-family-text: 'Roboto',
+sans-serif;
 
-  /* ====== SIZES (HEIGHT, WIDTH) ====== */
-  $size-XXS: 8px;
-  $size-XS: 16px;
-  $size-S: 24px;
-  $size-M: 32px;
-  $size-L: 40px;
-  $size-XL: 48px;
-  $size-XXL: 72px;
+/* ====== SPACING ====== */
+$space-base: 8px;
+$space-XS: 16px;
+$space-S: 24px;
+$space-M: 32px;
+$space-L: 40px;
+$space-XL: 48px;
 
-  $size-number: $size-S * 0.9;
+/* ====== SIZES (HEIGHT, WIDTH) ====== */
+$size-XXS: 8px;
+$size-XS: 16px;
+$size-S: 24px;
+$size-M: 32px;
+$size-L: 40px;
+$size-XL: 48px;
+$size-XXL: 72px;
 
-  /* ====== RADIUS ====== */
+$size-number: $size-S * 0.9;
 
-  $radius-cercle: 50%;
-  $radius-S: 5px;
-  $radius-M: 16px;
-  $radius-L: 24px;
-  $radius-XL: 48px;
+/* ====== RADIUS ====== */
+
+$radius-cercle: 50%;
+$radius-S: 5px;
+$radius-M: 16px;
+$radius-L: 24px;
+$radius-XL: 48px;
+
+/* ====== BREAKPOINTS ====== */
+
+$tabletMin: 550;
+$laptopMin: 1100;
+$desktopMin: 1500;
+
+// Tablet min-width : 34.375 rem and up
+$tabletAndUp: (min-width: math.div($tabletMin, 16) rem);
+// laptopMin : 68.75 rem and up
+$laptopAndUp: (min-width: math.div($laptopMin, 16) rem);
+// Desktop: 93.75 rem and up 
+$desktopAndUp: (min-width: math.div($desktopMin, 16) rem);
+// Tablet only : between 34.375 rem and 1099
+$tabletOnly: (min-width: math.div($tabletMin, 16)rem) and (max-width: math.div($laptopMin - 1, 16)rem);
