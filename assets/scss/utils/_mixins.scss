@@ -1,3 +1,6 @@
+// To be able to use math.div
+@use "sass:math";
+
 // Display of the item number in the list
 
 @mixin listItemPosition($listItemNumbers) {
@@ -7,7 +10,7 @@
     &--#{$itemPosition}::before {
       content: $itemNumber;
       position: absolute;
-      left: 0;
+      left: math.div($size-number, 2) * -1;
       background: $col-primary;
       width: $size-number;
       height: $size-number;

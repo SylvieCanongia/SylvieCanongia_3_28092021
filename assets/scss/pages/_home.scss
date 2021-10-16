@@ -93,10 +93,14 @@
     }
 
     &__list {
-      position: relative;
+      // position: relative;
       display: flex;
       flex-direction: column;
       align-content: center;
+
+      @include media("tabletAndUp") {
+        
+      }
     }
 
     // Display of the item number in the list
@@ -111,10 +115,11 @@
     }
 
     &__list li {
+      position: relative;
       display: flex;
       align-items: center;
       // $size-number is the width of the number of the li ($size-S * 0.9)
-      margin-inline: math.div($size-number, 2);
+      margin-inline-start: math.div($size-number, 2);
       height: $size-XXL;
       background: $col-grey-background-light;
       border-radius: $radius-L;
@@ -130,13 +135,14 @@
         font-size: $font-size-L;
         color: $col-grey-icon;
         padding-inline-start: $space-M;
-        // Padding end equal to the start less half the width of the number
-        // to have an equal distance before and after the icon
-        padding-inline-end: $space-M - math.div($size-number, 2);
       }
 
       &:last-child i {
         color: $col-primary;
+      }
+
+      span {
+        padding-inline: $space-S;
       }
     }
   }
