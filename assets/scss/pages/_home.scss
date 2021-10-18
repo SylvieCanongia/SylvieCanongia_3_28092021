@@ -174,14 +174,12 @@
       }
 
       @include media("laptopAndUp") {
-        grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(480px, 100%), 1fr));
       }
 
       @include media("desktopAndUp") {
         grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
       }
-
-
     }
 
     &__card__wrapper {

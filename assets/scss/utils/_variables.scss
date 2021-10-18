@@ -92,7 +92,7 @@ $tabletMediumMinRem: math.div($tabletMediumMin, 16);
 // Laptop min-width : 68.75rem 
 $laptopMinRem: math.div($laptopMin, 16);
 // desktopMin min-width : 93.75rem 
-$desktopMinRem: math.div($laptopMin, 16);
+$desktopMinRem: math.div($desktopMin, 16);
 // Tablet only : between 34.375rem and 68.69rem
 $tabletMaxRem: math.div($laptopMin - 1, 16);
 
