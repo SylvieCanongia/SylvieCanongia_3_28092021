@@ -9,7 +9,7 @@
     "dev": "parcel index.html",
     "build-dev": "parcel build ./index.html --no-minify --public-url ./",
     "build": "parcel build index.html",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose --overwrite-local"
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
     "cssnano": "^5.0.8",
