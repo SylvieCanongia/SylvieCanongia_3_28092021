@@ -4,3 +4,6 @@ dist
 .cache
 
 node_modules
+
+.sass-cache
+public/
