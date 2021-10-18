@@ -79,13 +79,16 @@ $radius-XL: 48px;
 /* ====== BREAKPOINTS ====== */
 
 // See in the file 'layouts/_breakpoints.scss'
-$tabletMin: 500;
+$tabletSmallMin: 500;
+$tabletMediumMin: 750;
 $laptopMin: 1100;
 $desktopMin: 1500;
 
 // Min width converted to rem
-// Tablet min-width : 43.75rem 
-$tabletMinRem: math.div($tabletMin, 16);
+// Tablet small min-width : 31.25rem 
+$tabletSmallMinRem: math.div($tabletSmallMin, 16);
+// Tablet medium min-width : 43.75rem 
+$tabletMediumMinRem: math.div($tabletMediumMin, 16);
 // Laptop min-width : 68.75rem 
 $laptopMinRem: math.div($laptopMin, 16);
 // desktopMin min-width : 93.75rem 
@@ -95,10 +98,11 @@ $tabletMaxRem: math.div($laptopMin - 1, 16);
 
 
 @function breakpoints($deviceMin) {
-  $device: ("tabletAndUp": "(min-width: #{$tabletMinRem}rem)",
+  $device: ("tabletSmallAndUp": "(min-width: #{$tabletSmallMinRem}rem)",
+    "tabletMediumAndUp": "(min-width: #{$tabletMediumMinRem}rem)",
     "laptopAndUp": "(min-width: #{$laptopMinRem}rem)",
     "desktopAndUp": "(min-width: #{$desktopMinRem}rem)",
-    "tabletOnly": "(min-width: #{$tabletMinRem}rem) and (max-width: #{$tabletMaxRem}rem)"
+    "tabletOnly": "(min-width: #{$tabletSmallMinRem}rem) and (max-width: #{$tabletMaxRem}rem)"
   );
   @return map-get($device, $deviceMin);
 }

@@ -93,16 +93,9 @@
     }
 
     &__list {
-      // position: relative;
       display: flex;
       flex-direction: column;
       align-content: center;
-
-      // @include media("laptopAndUp") {
-      //   display: grid;
-      //   grid-template-columns: repeat(3, 1fr);
-      //   gap: $space-XS;
-      // }
     }
 
     // Display of the item number in the list
@@ -131,10 +124,6 @@
       &:last-child {
         margin-block-end: revert;
         background: $col-purple-light-background;
-
-        // @include media ("laptopAndUp") {
-          // grid-column: 2 / span 2;
-        // }
       }
 
       i {
@@ -168,7 +157,21 @@
     &__cards {
       display: grid;
       gap: $space-XS;
-      grid-template-columns: repeat(auto-fill, minmax(min(500px, 100%), 1fr))
+      grid-template-columns: repeat(auto-fill, minmax(min(420px, 100%), 1fr));
+
+      @include media("tabletMediumAndUp") {
+        grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr));
+      }
+
+      @include media("laptopAndUp") {
+        grid-template-columns: repeat(auto-fill, minmax(min(400px, 100%), 1fr));
+      }
+
+      @include media("desktopAndUp") {
+        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+      }
+
+
     }
 
     &__card__wrapper {
@@ -217,19 +220,25 @@
         object-fit: cover;
         object-position: bottom;
 
-        // @include media ("tabletAndUp") {
-        //   height: 320px;
-        //   object-position: 50% 85%;
-        // }
+        @include media ("tabletSmallAndUp") {
+          height: 240px;
+          object-position: 50% 80%;
+        }
+
+        @include media ("tabletMediumAndUp") {
+          height: 210px;
+          object-position: 50% 75%;
+        }
+
+        @include media("laptopAndUp") {
+          height: 230px;
+          object-position: 50% 70%;
+        }
       }
 
       // centering of the 2nd img
       &__wrapper:nth-child(2) img {
         object-position: 50% 60%;
-
-        // @include media ("tabletAndUp") {
-          // object-position: revert;
-        // }
       }
 
       // Card heading, heart and description
