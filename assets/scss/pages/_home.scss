@@ -98,7 +98,7 @@
 
       @include media ("tabletMediumAndUp") {
         flex-direction: row;
-        justify-content : space-between;
+        justify-content: space-between;
         gap: $space-S;
       }
     }
@@ -127,6 +127,7 @@
       box-shadow: 2px 2px 10px 2px $col-grey-shadow;
 
       @include media ("tabletMediumAndUp") {
+        // so that the items occupy the entire width of the page
         flex-grow: 1;
       }
 

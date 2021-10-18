@@ -3,35 +3,41 @@
   padding-inline: $widthWrapper;
   padding-block: $space-S;
 
-  & nav {
-    max-width: $maxWidth;
-    margin-inline: auto;
-  }
-
   &__logo {
 
-    // svg {
-    //   margin-top: $space-S;
-    // }
     &__svg {
       fill: white;
     }
   }
 
-  &__navList li {
-    padding-block-end: $space-base;
-
-    a,
-    i {
-      color: $col-white;
+  &__navList {
+    @include media("tabletMediumAndUp") {
+      width: 60%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: $space-S;
     }
 
-    a i.hands::before {
-      font-size: $font-size-base * 0.65;
+    @include media("laptopAndUp") {
+      width: auto;
+      display: flex;
     }
 
-    i {
-      margin-inline-end: $space-base;
+    & li {
+      padding-block-end: $space-base;
+
+      a,
+      i {
+        color: $col-white;
+      }
+
+      a i.hands::before {
+        font-size: $font-size-base * 0.65;
+      }
+
+      i {
+        margin-inline-end: $space-base;
+      }
     }
   }
 }
