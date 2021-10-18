@@ -3,19 +3,26 @@
   padding-inline: $widthWrapper;
   padding-block: $space-S;
 
+  & nav {
+    max-width: $maxWidth;
+    margin-inline: auto;
+  }
+
   &__logo {
+
     // svg {
     //   margin-top: $space-S;
     // }
     &__svg {
-      fill:white;
+      fill: white;
     }
   }
 
   &__navList li {
     padding-block-end: $space-base;
 
-    a, i {
+    a,
+    i {
       color: $col-white;
     }
 

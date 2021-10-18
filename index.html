@@ -25,7 +25,7 @@
 <body>
   <!-- ======= Header ======= -->
   <header class="header">
-    <div class="headerLogo__wrapper">
+    <div class="headerLogo__wrapper content__widthWrapper">
       <h1>ohmyfood</h1>
     </div>
   </header>
@@ -36,7 +36,7 @@
     <!-- Section location -->
     <section class="location">
       <div class="location__form__backgroundWrapper">
-        <form role="search" class="location__form">
+        <form role="search" class="location__form content__widthWrapper">
           <div class="location__form__searchBarWrapper">
             <i class="fas fa-map-marker-alt"></i>
             <input type="text" id="" placeholder="Paris, Belleville" aria-label="Rechercher un restaurant" value="Paris, Belleville" />
@@ -44,7 +44,7 @@
         </form>
       </div>
       <div class="location__content__backgroundWrapper">
-        <div class="location__content">
+        <div class="location__content content__widthWrapper">
           <h2 class="location__content__heading">
             Réservez le menu qui vous convient
           </h2>
@@ -63,99 +63,103 @@
 
     <!-- Section functionning -->
     <section class="functioning">
-      <h2 class="functioning__heading">Fonctionnement</h2>
-      <ul class="functioning__list">
-        <li class="functioning__list__item--1"><i class="fas fa-mobile-alt"></i><span>Choisissez un restaurant</span></li>
-        <li class="functioning__list__item--2"><i class="fas fa-list-ul"></i><span>Composez votre menu</span></li>
-        <li class="functioning__list__item--3"><i class="fas fa-store"></i><span>Dégustez au restaurant</span></li>
-      </ul>
+      <div class="content__widthWrapper">
+        <h2 class="functioning__heading">Fonctionnement</h2>
+        <ul class="functioning__list">
+          <li class="functioning__list__item--1"><i class="fas fa-mobile-alt"></i><span>Choisissez un restaurant</span></li>
+          <li class="functioning__list__item--2"><i class="fas fa-list-ul"></i><span>Composez votre menu</span></li>
+          <li class="functioning__list__item--3"><i class="fas fa-store"></i><span>Dégustez au restaurant</span></li>
+        </ul>
+      </div>
     </section>
     <!-- End section functionning -->
 
     <!-- Section restaurants -->
     <article class="restaurants">
-      <h2 class="restaurants__heading">Restaurants</h2>
-      <div class="restaurants__cards">
-        <a href="javascript:void(0)" class="restaurants__card__wrapper">
-          <article class="restaurants__card">
-            <div class="restaurants__cardImg__container new">
-              <picture>
-                <source srcset="~/assets/images/restaurants/palette-du-gout.webp" type="image/webp">
-                <img src="~/assets/images/restaurants/palette-du-gout-2201.jpg" type="image/jpg"
-                  alt="Un plat au restaurant 'La Palette du goût' à Paris" class="restaurants__cardImg" />
-              </picture>
-            </div>
-            <div class="restaurants__card__content__wrapper">
-              <h3 class="restaurants__cardHeading">
-                La palette du goût
-                <span role="img" aria-label="Heart for liking it" class="heart">
-                  <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
-                </span>
-              </h3>
-              <p class="restaurants__cardDescription">Ménilmontant</p>
-            </div>
-          </article>
-        </a>
-        <a href="javascript:void(0)" class="restaurants__card__wrapper">
-          <article class="restaurants__card">
-            <div class="restaurants__cardImg__container new">
-              <picture>
-                <source srcset="~/assets/images/restaurants/note-enchantee.webp" type="image/webp">
-                <img src="~/assets/images/restaurants/note-enchantee-1512.jpg" type="image/jpg"
-                  alt="Un plat au restaurant 'La note enchantée' à Paris" class="restaurants__cardImg" />
-              </picture>
-            </div>
-            <div class="restaurants__card__content__wrapper">
-              <h3 class="restaurants__cardHeading">
-                La note enchantée
-                <span role="img" aria-label="Heart for liking it">
-                  <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
-                </span>
-              </h3>
-              <p class="restaurants__cardDescription">Charonne</p>
-            </div>
-          </article>
-        </a>
-        <a href="javascript:void(0)" class="restaurants__card__wrapper">
-          <article class="restaurants__card">
-            <div class="restaurants__cardImg__container">
-              <picture>
-                <source srcset="~/assets/images/restaurants/a-la-francaise.webp" type="image/webp">
-                <img src="~/assets/images/restaurants/a-la-francaise-1968.jpg" type="image/jpg" alt="Un plat au restaurant 'A la française' à Paris"
-                  class="restaurants__cardImg" />
-              </picture>
-            </div>
-            <div class="restaurants__card__content__wrapper">
-              <h3 class="restaurants__cardHeading">
-                À la française
-                <span role="img" aria-label="Heart for liking it">
-                  <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
-                  </i></span>
-              </h3>
-              <p class="restaurants__cardDescription">Cité Rouge</p>
-            </div>
-          </article>
-        </a>
-        <a href="javascript:void(0)" class="restaurants__card__wrapper">
-          <article class="restaurants__card">
-            <div class="restaurants__cardImg__container">
-              <picture>
-                <source srcset="~/assets/images/restaurants/delice-des-sens.webp" type="image/webp">
-                <img src="~/assets/images/restaurants/delice-des-sens-2522.jpg" type="image/jpg"
-                  alt="Un plat au restaurant 'Le délice des sens' à Paris" class="restaurants__cardImg" />
-              </picture>
-            </div>
-            <div class="restaurants__card__content__wrapper">
-              <h3 class="restaurants__cardHeading">
-                Le délice des sens
-                <span role="img" aria-label="Heart for liking it">
-                  <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
-                  </i></span>
-              </h3>
-              <p class="restaurants__cardDescription">Folie-Méricourt</p>
-            </div>
-          </article>
-        </a>
+      <div class="content__widthWrapper">
+        <h2 class="restaurants__heading">Restaurants</h2>
+        <div class="restaurants__cards">
+          <a href="javascript:void(0)" class="restaurants__card__wrapper">
+            <article class="restaurants__card">
+              <div class="restaurants__cardImg__container new">
+                <picture>
+                  <source srcset="~/assets/images/restaurants/palette-du-gout.webp" type="image/webp">
+                  <img src="~/assets/images/restaurants/palette-du-gout-2201.jpg" type="image/jpg"
+                    alt="Un plat au restaurant 'La Palette du goût' à Paris" class="restaurants__cardImg" />
+                </picture>
+              </div>
+              <div class="restaurants__card__content__wrapper">
+                <h3 class="restaurants__cardHeading">
+                  La palette du goût
+                  <span role="img" aria-label="Heart for liking it" class="heart">
+                    <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
+                  </span>
+                </h3>
+                <p class="restaurants__cardDescription">Ménilmontant</p>
+              </div>
+            </article>
+          </a>
+          <a href="javascript:void(0)" class="restaurants__card__wrapper">
+            <article class="restaurants__card">
+              <div class="restaurants__cardImg__container new">
+                <picture>
+                  <source srcset="~/assets/images/restaurants/note-enchantee.webp" type="image/webp">
+                  <img src="~/assets/images/restaurants/note-enchantee-1512.jpg" type="image/jpg"
+                    alt="Un plat au restaurant 'La note enchantée' à Paris" class="restaurants__cardImg" />
+                </picture>
+              </div>
+              <div class="restaurants__card__content__wrapper">
+                <h3 class="restaurants__cardHeading">
+                  La note enchantée
+                  <span role="img" aria-label="Heart for liking it">
+                    <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
+                  </span>
+                </h3>
+                <p class="restaurants__cardDescription">Charonne</p>
+              </div>
+            </article>
+          </a>
+          <a href="javascript:void(0)" class="restaurants__card__wrapper">
+            <article class="restaurants__card">
+              <div class="restaurants__cardImg__container">
+                <picture>
+                  <source srcset="~/assets/images/restaurants/a-la-francaise.webp" type="image/webp">
+                  <img src="~/assets/images/restaurants/a-la-francaise-1968.jpg" type="image/jpg" alt="Un plat au restaurant 'A la française' à Paris"
+                    class="restaurants__cardImg" />
+                </picture>
+              </div>
+              <div class="restaurants__card__content__wrapper">
+                <h3 class="restaurants__cardHeading">
+                  À la française
+                  <span role="img" aria-label="Heart for liking it">
+                    <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
+                    </i></span>
+                </h3>
+                <p class="restaurants__cardDescription">Cité Rouge</p>
+              </div>
+            </article>
+          </a>
+          <a href="javascript:void(0)" class="restaurants__card__wrapper">
+            <article class="restaurants__card">
+              <div class="restaurants__cardImg__container">
+                <picture>
+                  <source srcset="~/assets/images/restaurants/delice-des-sens.webp" type="image/webp">
+                  <img src="~/assets/images/restaurants/delice-des-sens-2522.jpg" type="image/jpg"
+                    alt="Un plat au restaurant 'Le délice des sens' à Paris" class="restaurants__cardImg" />
+                </picture>
+              </div>
+              <div class="restaurants__card__content__wrapper">
+                <h3 class="restaurants__cardHeading">
+                  Le délice des sens
+                  <span role="img" aria-label="Heart for liking it">
+                    <img class="heart" src="~/assets/images/heart.svg" alt="Un coeur à cliquer" />
+                    </i></span>
+                </h3>
+                <p class="restaurants__cardDescription">Folie-Méricourt</p>
+              </div>
+            </article>
+          </a>
+        </div>
       </div>
     </article>
     <!-- End section restaurants -->
@@ -164,7 +168,7 @@
 
   <!-- ======= Footer ======= -->
   <footer class="footer">
-    <nav>
+    <nav class="content__widthWrapper">
       <div class="footer__logo">
         <svg class="svg" viewBox="0 0 350 60" width="196" height="34" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path class="footer__logo__svg"

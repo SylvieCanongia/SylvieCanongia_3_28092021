@@ -25,6 +25,11 @@ html {
     }
 }
 
+.content__widthWrapper {
+    max-width: $maxWidth;
+    margin-inline: auto;
+}
+
 a {
     text-decoration: none;
 }
