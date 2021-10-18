@@ -98,9 +98,11 @@
       flex-direction: column;
       align-content: center;
 
-      @include media("tabletAndUp") {
-        
-      }
+      // @include media("laptopAndUp") {
+      //   display: grid;
+      //   grid-template-columns: repeat(3, 1fr);
+      //   gap: $space-XS;
+      // }
     }
 
     // Display of the item number in the list
@@ -129,6 +131,10 @@
       &:last-child {
         margin-block-end: revert;
         background: $col-purple-light-background;
+
+        // @include media ("laptopAndUp") {
+          // grid-column: 2 / span 2;
+        // }
       }
 
       i {
@@ -210,11 +216,20 @@
         width: 100%;
         object-fit: cover;
         object-position: bottom;
+
+        // @include media ("tabletAndUp") {
+        //   height: 320px;
+        //   object-position: 50% 85%;
+        // }
       }
 
       // centering of the 2nd img
       &__wrapper:nth-child(2) img {
         object-position: 50% 60%;
+
+        // @include media ("tabletAndUp") {
+          // object-position: revert;
+        // }
       }
 
       // Card heading, heart and description
