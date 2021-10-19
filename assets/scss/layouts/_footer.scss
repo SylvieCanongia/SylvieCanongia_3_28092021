@@ -3,6 +3,13 @@
   padding-inline: $widthWrapper;
   padding-block: $space-S;
 
+  .content__widthWrapper {
+    @include media("laptopAndUp") {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
   &__logo {
 
     &__svg {
@@ -29,6 +36,11 @@
       a,
       i {
         color: $col-white;
+        font-size: $font-size-M;
+
+        @include media ("laptopAndUp") {
+          font-size: $font-size-M * 1.1;
+        }
       }
 
       a i.hands::before {

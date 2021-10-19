@@ -17,6 +17,10 @@
       &__searchBarWrapper {
         margin-inline: auto;
         width: 170px;
+
+        @include media ("laptopAndUp") {
+          width: 210px;
+        }
       }
 
       i {
@@ -30,6 +34,10 @@
         width: 150px;
         font-size: $font-size-M;
         padding-inline: $space-base * 1.5;
+
+        @include media("laptopAndUp") {
+          font-size: $font-size-M * 1.1;
+        }
       }
     }
 
@@ -72,6 +80,11 @@
         font-weight: $font-weight-bold;
         box-shadow: 2px 2px 5px 4px $col-grey-shadow;
         cursor: pointer;
+
+        @include media ("laptopAndUp") {
+          font-size: $font-size-M;
+          width: 230px;
+        }
       }
 
       &__button span {
@@ -140,6 +153,10 @@
         font-size: $font-size-L;
         color: $col-grey-icon;
         padding-inline-start: $space-M;
+
+        @include media ("laptopAndUp") {
+          font-size: $font-size-L * 1.1;
+        }
       }
 
       &:last-child i {
@@ -148,6 +165,10 @@
 
       span {
         padding-inline: $space-S;
+
+        @include media ("laptopAndUp") {
+          font-size: $font-size-L;
+        }
       }
     }
   }
@@ -178,7 +199,7 @@
       }
 
       @include media("desktopAndUp") {
-        grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(min(345px, 100%), 1fr));
       }
     }
 

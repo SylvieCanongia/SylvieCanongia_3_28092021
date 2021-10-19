@@ -19,6 +19,12 @@
       display: grid;
       place-items: center;
       font-size: $font-size-S;
+
+      @include media ("laptopAndUp") {
+        width: $size-number * 1.1;
+        height: $size-number * 1.1;
+        font-size: $font-size-M;
+      }
     }
   }
 }
