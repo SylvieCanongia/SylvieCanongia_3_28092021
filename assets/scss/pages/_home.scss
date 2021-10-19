@@ -88,6 +88,7 @@
           width: 230px;
         }
 
+        // button explore effect on hover with transform and opacity
         &:hover {
           &::after {
             opacity: 1;
@@ -162,14 +163,32 @@
       border-radius: $radius-L;
       margin-block-end: $space-S;
       box-shadow: 2px 2px 10px 2px $col-grey-shadow;
+      z-index: 1;
 
       @include media ("tabletMediumAndUp") {
         // so that the items occupy the entire width of the page
         flex-grow: 1;
       }
 
+      // list item color on hover with opacity
       &:hover {
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         background: $col-purple-light-background;
+        border-radius: $radius-L;
+        opacity: 0;
+        z-index: -1;
+        transition: opacity 250ms ease-in-out;
       }
 
       &:last-child {
