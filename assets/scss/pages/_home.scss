@@ -80,10 +80,17 @@
         font-weight: $font-weight-bold;
         box-shadow: 2px 2px 5px 4px $col-grey-shadow;
         cursor: pointer;
+        transition: transform 200ms ease-in-out;
 
         @include media ("laptopAndUp") {
           font-size: $font-size-M;
           width: 230px;
+        }
+
+        &:hover {
+          background: $gradient-button-light;
+          box-shadow: 1px 1px 2px 2px $col-grey-icon;
+          transform: scale(1.02);
         }
       }
 
