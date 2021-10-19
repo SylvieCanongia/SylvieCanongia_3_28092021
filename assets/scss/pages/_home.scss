@@ -80,7 +80,8 @@
         font-weight: $font-weight-bold;
         box-shadow: 2px 2px 5px 4px $col-grey-shadow;
         cursor: pointer;
-        transition: transform 200ms ease-in-out;
+        position: relative;
+        z-index: 1;
 
         @include media ("laptopAndUp") {
           font-size: $font-size-M;
@@ -88,9 +89,25 @@
         }
 
         &:hover {
+          &::after {
+            opacity: 1;
+            transform: scale(1.02)
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          border-radius: $radius-XL;
           background: $gradient-button-light;
-          box-shadow: 1px 1px 2px 2px $col-grey-icon;
-          transform: scale(1.02);
+          opacity: 0;
+          z-index: -1;
+          transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+          box-shadow: 2px 2px 3px 1px $col-grey-icon;
         }
       }
 
@@ -151,9 +168,12 @@
         flex-grow: 1;
       }
 
+      &:hover {
+        background: $col-purple-light-background;
+      }
+
       &:last-child {
         margin-block-end: revert;
-        background: $col-purple-light-background;
       }
 
       i {

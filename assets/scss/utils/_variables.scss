@@ -11,9 +11,7 @@ $maxWidth: 96.875rem;
 
 /* Blue */
 $col-primary: hsl(267, 66%, 60%); // #9356DC
-$col-primary-light: hsl(267, 66%, 65%);
 $col-secondary: hsl(317, 100%, 74%); // #FF79DA
-$col-secondary-light: hsl(317, 100%, 79%);
 $col-tertiary: hsl(165, 56%, 74%); // #99E2D0
 
 $col-green-text: hsl(166, 100%, 26%);
@@ -32,7 +30,7 @@ $col-purple-light-background: hsl(268, 89%, 96%);
 
 /* Gradients */
 $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
-$gradient-button-light: linear-gradient(170deg, $col-secondary-light 0%, $col-primary-light 100%);
+$gradient-button-light: linear-gradient(170deg, lighten($col-secondary, 5) 0%, lighten($col-primary, 5) 100%);
 
 /* ====== TYPOGRAPHY ====== */
 $font-size-base: 1em;
