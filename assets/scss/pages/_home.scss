@@ -335,33 +335,34 @@
 
         span {
           position: relative;
+
           i.heart-icon{
             font-size: $font-size-XL;
-            font-weight: 200;
-            z-index: 2;
-            
+            transition: opacity 250ms;
+            z-index: 1;
             &:hover {
-              &::after {
-              transform: scaleY(1);
-              opacity: 1;
-              }
+              opacity: 0;
             }
 
-            &::after {
-              content: "\f004";
-              font-weight: 900;
-              position: absolute;
-              top: 1px;
-              right: 0;
-              bottom: -6px;
-              left: 0;
-              color: red;
-              opacity: 0;
-              z-index: 1;
-              transform: scaleY(0);
-              transform-origin: center center;
-              transition: transform 300ms;
+            &:hover + .heart-icon-filled {
+              opacity: 1;
             }
+          }
+
+          i.heart-icon-filled {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            font-size: $font-size-XL;
+            background: $gradient-heart;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            transition: opacity 250ms;
+            z-index: -1;
           }
         }
       }

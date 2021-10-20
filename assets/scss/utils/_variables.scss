@@ -31,7 +31,7 @@ $col-purple-light-background: hsl(268, 89%, 96%);
 /* Gradients */
 $gradient-button: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
 $gradient-button-light: linear-gradient(170deg, lighten($col-secondary, 5) 0%, lighten($col-primary, 5) 100%);
-$gradient-heart: linear-gradient(170deg, $col-secondary 0%, $col-primary 100%);
+$gradient-heart: -webkit-linear-gradient(60deg, $col-secondary 0%, $col-primary 100%);
 /* ====== TYPOGRAPHY ====== */
 $font-size-base: 1em;
 
