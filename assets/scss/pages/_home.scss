@@ -256,7 +256,7 @@
       overflow: hidden;
 
       &:hover .restaurants__card{
-        transform: scale(1.02);
+        transform: scale(1.015);
       }
     }
 
@@ -338,13 +338,35 @@
 
           i.heart-icon{
             font-size: $font-size-XL;
-            transition: opacity 250ms;
+            transition: opacity 550ms;
             z-index: 1;
             &:hover {
               opacity: 0;
             }
 
-            &:hover + .heart-icon-filled {
+            &:hover + .heart-icon-filled  {
+              animation: heart-fill 250ms ease both;
+              // transform: scaleY(1);
+              // opacity: 1;
+            }
+          }
+
+          @keyframes heart-fill {
+            0% {
+              transform: scaleY(0);
+              opacity: 0;
+            }
+            17% {
+                transform: scaleY(.18);
+            }
+            24% {
+                transform: scaleY(.4);
+            }
+            46% {
+                transform: scaleY(.81);
+            }
+            100% {
+              transform: scaleY(1);
               opacity: 1;
             }
           }
@@ -361,12 +383,14 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             opacity: 0;
-            transition: opacity 250ms;
+            // transition: transform 250ms cubic-bezier(.32,0.07,1);
+            transform-origin: center center;
+            transform: scaleY(0);
             z-index: -1;
           }
         }
       }
-
+      
       &Description {
         padding-block-end: $space-XS;
       }
