@@ -253,6 +253,11 @@
       // radius around the card image
       border-radius: $radius-L;
       box-shadow: 1px 1px 10px 2px $col-grey-shadow;
+      overflow: hidden;
+
+      &:hover .restaurants__card{
+        transform: scale(1.04);
+      }
     }
 
     &__card {
@@ -264,6 +269,7 @@
       background-color: $col-white;
       border-radius: $radius-L;
       position: relative;
+      transition: transform 280ms ease-in-out;
 
       // restaurants card img
       &Img,
