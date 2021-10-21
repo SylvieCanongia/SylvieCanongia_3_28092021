@@ -28,3 +28,16 @@
     }
   }
 }
+
+// Display a green line under the menu headings in menus pages
+// Used with a pseudo element like ::after
+@mixin green-line {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 2.75rem;
+  border-bottom: 3px solid $col-tertiary;
+  display: block;
+  padding-block-start: $space-base * 0.5;
+}
