@@ -69,15 +69,14 @@
 
       &__button {
         width: fit-content;
+        width: -moz-fit-content;
         margin-inline: auto;
         height: $size-XL;
-        width: 215px;
         font-size: $font-size-S;
-        padding-inline: $space-base * 1.5;
+        padding-inline: $space-XS * 1.2;
         background: $gradient-button;
         border: transparent;
         border-radius: $radius-XL;
-        font-weight: $font-weight-bold;
         box-shadow: 2px 2px 5px 4px $col-grey-shadow;
         cursor: pointer;
         position: relative;
@@ -85,7 +84,7 @@
 
         @include media ("laptopAndUp") {
           font-size: $font-size-M;
-          width: 230px;
+          
         }
 
         // button explore effect on hover with transform and opacity
