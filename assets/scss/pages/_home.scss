@@ -15,6 +15,8 @@
     &__form {
 
       &__searchBarWrapper {
+        display: flex;
+        align-items: center;
         margin-inline: auto;
         width: 170px;
 
@@ -34,9 +36,13 @@
         width: 150px;
         font-size: $font-size-M;
         padding-inline: $space-base * 1.5;
+        margin-inline-start: $space-base;
+        outline: none;
 
         @include media("laptopAndUp") {
           font-size: $font-size-M * 1.1;
+          width: fit-content;
+          width: -moz-fit-content;
         }
       }
     }
