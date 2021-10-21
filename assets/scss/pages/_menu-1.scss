@@ -1,0 +1,119 @@
+// To be able to use math.div
+@use "sass:math";
+
+.main__menu-1 {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  // ==== Section title-menu ====
+
+  .menuTitle {
+    h2 {
+      font-family: $font-family-title;
+      font-weight: normal;
+      font-size: $font-size-XXL * 0.85;
+    }
+
+    &__backgroundWrapper {
+
+      &__img {
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    &__content {
+      position: relative;
+      top: ($space-XL * 1.1) * -1;
+      padding-inline: $widthWrapper;
+      padding-block-start: $space-M;
+      padding-block-end: $space-XS;
+      border-start-start-radius: $radius-XL * 0.9;
+      border-start-end-radius: $radius-XL * 0.9;
+      background: $col-grey-background-light;
+
+      &__heading {
+        margin-block-end: $space-base * 1.5;
+        display: flex;
+        justify-content: space-between;
+        // position: relative;
+
+        span {
+          position: relative;
+          height: 25px;
+
+          &:hover>.menu-heart-icon-filled {
+            animation: menu-heart-fill 350ms ease both;
+            // transform: scaleY(1);
+            // opacity: 1;
+          }
+
+          &:hover>.menu-heart-icon {
+            opacity: 0;
+          }
+
+          i.menu-heart-icon {
+            font-size: $font-size-XL;
+            transition: opacity 550ms;
+            z-index: 2;
+            // &:hover {
+            //   opacity: 0;
+            // }
+
+            // &:hover + .menu-heart-icon-filled  {
+            //   animation: menu-heart-fill 350ms ease both;
+            // transform: scaleY(1);
+            // opacity: 1;
+            // }
+          }
+
+          @keyframes menu-heart-fill {
+            0% {
+              transform: scaleY(0);
+              opacity: 0;
+            }
+
+            17% {
+              transform: scaleY(.18);
+            }
+
+            24% {
+              transform: scaleY(.4);
+            }
+
+            46% {
+              transform: scaleY(.81);
+            }
+
+            100% {
+              transform: scaleY(1);
+              opacity: 1;
+            }
+          }
+
+          i.menu-heart-icon-filled {
+            position: absolute;
+            top: 5px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            font-size: $font-size-XL;
+            background: $gradient-heart;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+            // transition: transform 250ms cubic-bezier(.32,0.07,1);
+            transform-origin: center center;
+            transform: scaleY(0);
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+
+
+  // ==== Section menus====
+
+}

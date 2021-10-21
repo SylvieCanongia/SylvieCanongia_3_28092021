@@ -1,8 +1,17 @@
 .header {
-
   &Logo__wrapper {
-
+    position: relative;
     h1 {
+      
+      span.menu__arrow {
+        position: absolute;
+        left: 24px;
+        top: 0;
+        
+        & i {
+          font-size: $font-size-XL;
+        }
+      }
       margin-block-start: $space-S;
       margin-block-end: $space-XS;
     }

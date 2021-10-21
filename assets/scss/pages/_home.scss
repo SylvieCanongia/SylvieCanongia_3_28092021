@@ -1,7 +1,8 @@
 // To be able to use math.div
 @use "sass:math";
 
-.main {
+.main__home {
+  min-height: 100%;
   // ==== Section location ====
 
   .location {
@@ -336,7 +337,7 @@
         padding-block-start: $space-base * 1.5;
         display: flex;
         justify-content: space-between;
-        position: relative;
+        // position: relative;
 
         span {
           position: relative;
