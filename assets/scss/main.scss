@@ -1,6 +1,7 @@
 // It's important to keep this order of import to avoid errors
 
 // 1. Utils
+@import "./utils/breakpoints";
 @import "./utils/variables";
 @import "./utils/functions";
 @import "./utils/mixins";
@@ -13,13 +14,13 @@
 @import "./base/fonts";
 @import "./base/typography";
 
+
 // 4. Components
 // @import "./components/button";
 
 // 5. Layout
 @import "./layouts/header";
 @import "./layouts/footer";
-// @import "./layouts/breakpoints";
 
 // 6. Pages (code blocks that only apply to a single page)
 @import "./pages/home";
