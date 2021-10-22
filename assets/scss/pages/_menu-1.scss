@@ -131,9 +131,21 @@
       gap: $space-XS;
 
       @include media ("tabletMediumAndUp") {
+        &>div {
+          width: 80%;
+          align-self: center;
+        }
+      }
+
+      // Menu group of dish on the same row
+      @include media ("laptopAndUp") {
         flex-direction: row;
         justify-content: space-between;
         gap: $space-S;
+
+        &>div {
+          width: 100%;
+        }
       }
     }
 
@@ -188,59 +200,47 @@
         margin-block-end: $space-base * 0.7;
       }
 
+      & article .list__item__desc__wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: $font-size-S;
+        font-weight: $font-weight-bold;
+        margin-inline-end: $space-base * 1.5;
+
+        // price displayed on a third line, under description
+        // @include media ("tabletMediumAndUp") {
+        //   flex-direction: column;
+        // }
+
+        & div {
+          // for the item to reduce from the right when it's hovered
+          transform: translateX(0);
+          transform-origin: left;
+          transition: transform 700ms;
+        }
+      }
+
       & p {
         font-size: $font-size-S;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        // display: flex;
+        // justify-content: space-between;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
 
-        & span {
-          font-weight: $font-weight-bold;
-          margin-inline-end: $space-base * 1.5;
-        }
-      }
+        // @include media ("tabletMediumAndUp") {
+        //   width: 170px;
+        // }
 
-      article {
-        & .list__item__desc {
-          display: flex;
-          justify-content: space-between;
-          margin-inline-end: $space-base * 1.5;
-        }
-
-        & .list__item__desc div {
-          font-weight: $font-weight-bold;
-          // for the item to reduce from the right when it's hovered
-          transform: translateX(0);
-          transform-origin: left;
-          transition: transform 700ms;
-        }
-
-        span {
-          // for the item to reduce from the right when it's hovered
-          transform: translateX(0);
-          transform-origin: left;
-          transition: transform 700ms;
-        }
-      }
-
-      // list item color on hover with opacity
-      &:hover {
-        & article span {
-          transform: translateX(-200%);
-        }
-
-        & article .list__item__desc div {
-          transform: translateX(-70%);
-        }
-
-        & article p {
-          width: auto;
-        }
-
-        &::after {
-          opacity: 0.7;
-          transform: scaleX(0.15);
-        }
+        // & span {
+        //   display: inline-block;
+        //   font-weight: $font-weight-bold;
+        //   margin-inline-end: $space-base * 1.5;
+        //   // for the item to reduce from the right when it's hovered
+        //   transform: translateX(0);
+        //   transform-origin: left;
+        // }
       }
 
       &::after {
@@ -259,6 +259,31 @@
         z-index: -1;
         transition: transform 400ms ease-in, opacity 400ms ease-in;
       }
+
+      // list item color on hover with opacity
+      &:hover {
+        &::after {
+          opacity: 0.7;
+          transform: scaleX(0.15);
+        }
+
+        & .list__item__desc__wrapper div {
+          transform: translateX(-200%);
+        }
+
+        & p {
+          width: 67%;
+
+          // @include media ("tabletMediumAndUp") {
+          //   width: 100%;
+          // }
+          //   span {
+          //   transform: translateX(-200%);
+          // }
+        }
+
+      }
+
 
       //   @include media ("laptopAndUp") {
       //     font-size: $font-size-L;
