@@ -4,6 +4,7 @@
 /*  ====== PAGE WRAPPER ====== */
 
 $widthWrapper: 24px;
+$widthWrapper-laptop: 32px;
 /* max-width 1550px */
 $maxWidth: 96.875rem;
 
@@ -48,8 +49,10 @@ $font-weight-regular: 400;
 $font-weight-bold: 700;
 
 /* ====== FONT-FAMILY ====== */
-$font-family-title: 'Shrikhand', cursive;
-$font-family-text: 'Roboto', sans-serif;
+$font-family-title: 'Shrikhand',
+cursive;
+$font-family-text: 'Roboto',
+sans-serif;
 
 /* ====== SPACING ====== */
 $space-base: 8px;

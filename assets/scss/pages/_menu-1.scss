@@ -107,9 +107,17 @@
 
   .menuCard {
     background: $col-grey-background-light;
-    padding-inline: $widthWrapper;
-    padding-block-start: $space-L;
-    padding-block-end: $space-L * 1.3;
+
+    &__content {
+      padding-inline: $widthWrapper;
+      padding-block-start: $space-L;
+      padding-block-end: $space-L * 1.3;
+
+      @include media ("laptopAndUp") {
+        $widthWrapper: 32px;
+        padding-inline: $widthWrapper;
+      }
+    }
 
     // h3
     &__heading {
@@ -265,10 +273,34 @@
         &::after {
           opacity: 0.7;
           transform: scaleX(0.15);
+
+          @include media ("tabletSmallAndUp") {
+            transform: scaleX(0.12);
+          }
+
+          @include media ("tabletMediumAndUp") {
+            transform: scaleX(0.10);
+          }
+
+          @include media ("laptopAndUp") {
+            transform: scaleX(0.15);
+          }
         }
 
         & .list__item__desc__wrapper div {
-          transform: translateX(-200%);
+          transform: translateX(-225%);
+
+          @include media ("tabletSmallAndUp") {
+            transform: translateX(-310%);
+          }
+
+          @include media ("laptopAndUp") {
+            transform: translateX(-225%);
+          }
+
+          @include media ("desktopAndUp") {
+            transform: translateX(-270%);
+          }
         }
 
         & p {
