@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
 
-  // ==== Section title-menu ====
+  // ==== Section menuTitle ====
 
   .menuTitle {
 
@@ -137,6 +137,32 @@
       }
     }
 
+    @keyframes menu-appear {
+      0% {
+        transform: translateY(30px);
+        opacity: 0;
+      }
+
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @mixin menu-appear-delay() {
+      &:first-child {
+        animation: menu-appear 700ms 200ms ease-out both;
+      }
+
+      &:nth-child(2) {
+        animation: menu-appear 700ms 400ms ease-out both;
+      }
+
+      &:nth-child(3) {
+        animation: menu-appear 700ms 600ms ease-out both;
+      }
+    }
+
     &__list li {
       height: $size-XXL * 0.9;
       background: $col-white;
@@ -147,6 +173,8 @@
       display: grid;
       align-items: center;
       padding-inline: $space-base * 1.1;
+      // menu appearance animation
+      @include menu-appear-delay;
 
       @include media ("tabletMediumAndUp") {
         // so that the items occupy the entire width of the page
