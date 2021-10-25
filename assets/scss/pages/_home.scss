@@ -95,7 +95,7 @@
 
         @include media ("laptopAndUp") {
           font-size: $font-size-M;
-          
+
         }
 
         // button explore effect on hover with transform and opacity
@@ -267,17 +267,6 @@
       }
     }
 
-    &__card__wrapper {
-      // radius around the card image
-      border-radius: $radius-L;
-      box-shadow: 1px 1px 10px 2px $col-grey-shadow;
-      overflow: hidden;
-
-      &:hover .restaurants__card{
-        transform: scale(1.015);
-      }
-    }
-
     &__card {
       display: grid;
       grid-template-areas:
@@ -288,6 +277,22 @@
       border-radius: $radius-L;
       position: relative;
       transition: transform 280ms ease-in-out;
+
+      &__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        // radius around the card image
+        border-radius: $radius-L;
+        box-shadow: 1px 1px 10px 2px $col-grey-shadow;
+        overflow: hidden;
+
+        &:hover .restaurants__card {
+          transform: scale(1.015);
+        }
+      }
 
       // restaurants card img
       &Img,
@@ -353,16 +358,20 @@
 
         span {
           position: relative;
+          isolation: isolate;
+          // z-index: 1;
+          // pointer-events: unset;
 
-          i.heart-icon{
+          i.heart-icon {
             font-size: $font-size-XL;
             transition: opacity 550ms;
-            z-index: 1;
+            z-index: 3;
+
             &:hover {
               opacity: 0;
             }
 
-            &:hover + .heart-icon-filled  {
+            &:hover+.heart-icon-filled {
               animation: heart-fill 250ms ease both;
               // transform: scaleY(1);
               // opacity: 1;
@@ -374,15 +383,19 @@
               transform: scaleY(0);
               opacity: 0;
             }
+
             17% {
-                transform: scaleY(.18);
+              transform: scaleY(.18);
             }
+
             24% {
-                transform: scaleY(.4);
+              transform: scaleY(.4);
             }
+
             46% {
-                transform: scaleY(.81);
+              transform: scaleY(.81);
             }
+
             100% {
               transform: scaleY(1);
               opacity: 1;
@@ -408,7 +421,7 @@
           }
         }
       }
-      
+
       &Description {
         padding-block-end: $space-XS;
       }
