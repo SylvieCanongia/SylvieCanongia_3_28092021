@@ -171,7 +171,7 @@
 
     @mixin menu-appear-delay() {
       &:first-child {
-        animation: menu-appear 700ms 200ms ease-out;
+        animation: menu-appear 700ms 200ms ease-out both;
       }
 
       &:nth-child(2) {
@@ -181,6 +181,11 @@
       &:nth-child(3) {
         animation: menu-appear 700ms 600ms ease-out both;
       }
+    }
+
+    &__list>div {
+      // menu appearance animation
+      @include menu-appear-delay;
     }
 
     &__list li {
@@ -195,9 +200,6 @@
       display: grid;
       align-items: center;
       padding-inline: $space-base * 1.1;
-
-      // menu appearance animation
-      @include menu-appear-delay;
 
       @include media ("tabletMediumAndUp") {
         // so that the items occupy the entire width of the page
@@ -215,11 +217,6 @@
         font-size: $font-size-S;
         font-weight: $font-weight-bold;
         margin-inline-end: $space-base * 1.5;
-
-        // price displayed on a third line, under description
-        // @include media ("tabletMediumAndUp") {
-        //   flex-direction: column;
-        // }
 
         & div {
           // for the item to reduce from the right when it's hovered
