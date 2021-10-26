@@ -221,7 +221,6 @@
         & div {
           // for the item to reduce from the right when it's hovered
           transform: translateX(0);
-          transform-origin: left;
           transition: transform 700ms;
         }
       }
@@ -235,12 +234,10 @@
 
       // @keyframes green-check {
       //   0% {
-      //     transform: translateX(0) rotate(-360deg);
-      //     opacity: 0.9;
+      //     transform: translateX(0) rotate(0);
       //   }
       //   100% {
-      //     transform: translateX(-3.5rem) rotate(1turn);
-      //     opacity: 0.9;
+      //     transform: translateX(-3.85rem) rotate(1turn);
       //   }
       // }
 
@@ -256,26 +253,26 @@
         -webkit-font-smoothing: antialiased;
         font-family: "Font Awesome 5 Free";
         font-weight: 900;
-        transform: translateX(0), rotate(360deg);
+        transform: translateX(0) rotate(0turn);
         transition: transform 400ms ease-in, rotate 400ms;
         z-index: 1;
       }
 
       &:hover {
         &::before {
-          // animation: green-check 500ms ease-in-out forwards;
-          transform: translateX(-3.85rem) rotate(1turn);
+          // animation: green-check 400ms ease-in-out forwards;
+          transform: translateX(-3.85rem) rotate(-1turn);
 
           @include media ("tabletMediumAndUp") {
-            transform: translateX(-4.1rem);
+            transform: translateX(-4.1rem) rotate(-1turn);
           }
 
           @include media ("laptopAndUp") {
-            transform: translateX(-4.2rem);
+            transform: translateX(-4.2rem) rotate(-1turn);
           }
 
           @include media ("desktopAndUp") {
-            transform: translateX(-4.6rem);
+            transform: translateX(-4.6rem) rotate(-1turn);
           }
         }
       }

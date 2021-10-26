@@ -1,5 +1,8 @@
 .footer {
-  animation: page 4s linear;
+  &.page-spinner {
+    animation: page 4s linear;
+  }
+  
   margin-top: auto;
   background: $col-grey-background-dark;
 
