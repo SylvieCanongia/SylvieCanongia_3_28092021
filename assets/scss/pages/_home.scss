@@ -2,6 +2,8 @@
 @use "sass:math";
 
 .main__home {
+  animation: page 4s linear;
+
   min-height: 100%;
   // ==== Section location ====
 
