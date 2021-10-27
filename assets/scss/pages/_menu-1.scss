@@ -5,7 +5,9 @@
   display: flex;
   flex-direction: column;
 
+  // ===========================
   // ==== Section menuTitle ====
+  // ===========================
 
   .menuTitle {
 
@@ -103,6 +105,11 @@
     }
   }
 
+  // ==========================
+  // ==== Section menuList ====
+  // ==========================
+
+
   // ==== Section menuCard ====
 
   .menuCard {
@@ -110,12 +117,26 @@
 
     &__content {
       padding-inline: $widthWrapper;
-      padding-block-start: $space-L;
-      padding-block-end: $space-L * 1.3;
+      // padding-block-start: $space-L;
+      // padding-block-end: $space-L * 1.3;
+      padding-block: $space-L * 0.5;
+
 
       @include media ("laptopAndUp") {
         $widthWrapper: 32px;
         padding-inline: $widthWrapper;
+      }
+    }
+
+    &:first-child {
+      .menuCard__content {
+        padding-block-start: $space-L;
+      }
+    }
+
+    &:last-child {
+      .menuCard__content {
+        padding-block-end: $space-XL;
       }
     }
 
@@ -337,4 +358,14 @@
     }
   }
 
+  // ==== End section menuCard ====
+
+  // === Button (component) ===
+  @include button {
+    display: block;
+    margin-block-start: $space-M * 1.3;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: $space-L * 1.1;
+  };
 }

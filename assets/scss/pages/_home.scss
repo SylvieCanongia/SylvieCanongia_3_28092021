@@ -80,53 +80,8 @@
         margin-block-end: $space-M;
       }
 
-      &__button {
-        width: fit-content;
-        width: -moz-fit-content;
-        margin-inline: auto;
-        height: $size-XL;
-        font-size: $font-size-S;
-        padding-inline: $space-XS * 1.2;
-        background: $gradient-button;
-        border: transparent;
-        border-radius: $radius-XL;
-        box-shadow: 2px 2px 5px 4px $col-grey-shadow;
-        cursor: pointer;
-        position: relative;
-        z-index: 1;
-
-        @include media ("laptopAndUp") {
-          font-size: $font-size-M;
-
-        }
-
-        // button explore effect on hover with transform and opacity
-        &:hover {
-          &::after {
-            opacity: 1;
-            transform: scale(1.02)
-          }
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          border-radius: $radius-XL;
-          background: $gradient-button-light;
-          opacity: 0;
-          z-index: -1;
-          transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
-          box-shadow: 2px 2px 3px 1px $col-grey-icon;
-        }
-      }
-
-      &__button span {
-        color: $col-white;
-      }
+      // Button component
+      @include button;
     }
   }
 
