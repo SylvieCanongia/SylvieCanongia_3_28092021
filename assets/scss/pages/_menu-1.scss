@@ -108,264 +108,294 @@
   // ==========================
   // ==== Section menuList ====
   // ==========================
+  .menuList {
 
-
-  // ==== Section menuCard ====
-
-  .menuCard {
-    background: $col-grey-background-light;
-
-    &__content {
-      padding-inline: $widthWrapper;
-      // padding-block-start: $space-L;
-      // padding-block-end: $space-L * 1.3;
-      padding-block: $space-L * 0.5;
-
-
-      @include media ("laptopAndUp") {
-        $widthWrapper: 32px;
-        padding-inline: $widthWrapper;
-      }
-    }
-
-    &:first-child {
-      .menuCard__content {
-        padding-block-start: $space-L;
-      }
-    }
-
-    &:last-child {
-      .menuCard__content {
-        padding-block-end: $space-XL;
-      }
-    }
-
-    // h3
-    &__heading {
-      text-transform: uppercase;
-      font-weight: $font-weight-regular;
-      margin-block-end: $space-XS * 1.2;
-      position: relative;
-
-      // green line under heading
-      &::after {
-        @include green-line;
-      }
-    }
-
-    &__list {
-      display: flex;
-      flex-direction: column;
-      align-content: center;
-      gap: $space-XS;
-
+    .menuList__content {
       @include media ("tabletMediumAndUp") {
-        &>div {
-          width: 80%;
-          align-self: center;
-        }
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        background: $col-grey-background-light;
+        column-gap: $space-S;
       }
 
-      // Menu group of dish on the same row
       @include media ("laptopAndUp") {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: $space-S;
+        column-gap: 100px;
+      }
+    }
 
-        &>div {
-          width: 100%;
+    // ==== Section menuCard ====
+
+    .menuCard {
+      background: $col-grey-background-light;
+
+      &__content {
+        padding-inline: $widthWrapper;
+        padding-block: $space-L * 0.5;
+
+        @include media ("laptopAndUp") {
+          padding-inline: 100px;
         }
       }
-    }
 
-    @keyframes menu-appear {
-      0% {
-        transform: translateY(30px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    @mixin menu-appear-delay() {
       &:first-child {
-        animation: menu-appear 700ms 200ms ease-out both;
+        @include media ("tabletMediumAndUp") {
+          grid-column: 1 / span 2;
+
+          .menuCard__content {
+            padding-block-start: $space-L;
+            padding-inline-end: 0;
+          }
+        }
       }
 
       &:nth-child(2) {
-        animation: menu-appear 700ms 400ms ease-out both;
-      }
+        @include media ("tabletMediumAndUp") {
+          grid-column: 3 / span 2;
 
-      &:nth-child(3) {
-        animation: menu-appear 700ms 600ms ease-out both;
-      }
-    }
-
-    &__list>div {
-      // menu appearance animation
-      @include menu-appear-delay;
-    }
-
-    &__list li {
-      position: relative;
-      height: $size-XXL * 0.9;
-      background: $col-white;
-      border-radius: $radius-M;
-      box-shadow: 2px 2px 10px 2px $col-grey-shadow;
-      z-index: 1;
-      overflow: hidden;
-
-      display: grid;
-      align-items: center;
-      padding-inline: $space-base * 1.1;
-
-      @include media ("tabletMediumAndUp") {
-        // so that the items occupy the entire width of the page
-        flex-grow: 1;
-      }
-
-      & h4 {
-        margin-block-end: $space-base * 0.7;
-      }
-
-      & article .list__item__desc__wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: $font-size-S;
-        font-weight: $font-weight-bold;
-        margin-inline-end: $space-base * 1.5;
-
-        & div {
-          // for the item to reduce from the right when it's hovered
-          transform: translateX(0);
-          transition: transform 700ms;
-        }
-      }
-
-      & p {
-        font-size: $font-size-S;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-
-      // @keyframes green-check {
-      //   0% {
-      //     transform: translateX(0) rotate(0);
-      //   }
-      //   100% {
-      //     transform: translateX(-3.85rem) rotate(1turn);
-      //   }
-      // }
-
-      &::before {
-        content: "\f058";
-        position: absolute;
-        right: -2.5rem;
-        color: $col-white;
-        display: inline-block;
-        font-style: normal;
-        font-variant: normal;
-        text-rendering: auto;
-        -webkit-font-smoothing: antialiased;
-        font-family: "Font Awesome 5 Free";
-        font-weight: 900;
-        transform: translateX(0) rotate(0turn);
-        transition: transform 400ms ease-in, rotate 400ms;
-        z-index: 1;
-      }
-
-      &:hover {
-        &::before {
-          // animation: green-check 400ms ease-in-out forwards;
-          transform: translateX(-3.85rem) rotate(-1turn);
-
-          @include media ("tabletMediumAndUp") {
-            transform: translateX(-4.1rem) rotate(-1turn);
-          }
-
-          @include media ("laptopAndUp") {
-            transform: translateX(-4.2rem) rotate(-1turn);
-          }
-
-          @include media ("desktopAndUp") {
-            transform: translateX(-4.6rem) rotate(-1turn);
+          .menuCard__content {
+            padding-block-start: $space-L;
+            padding-inline-start: 0;
           }
         }
       }
 
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: $col-tertiary;
-        border-start-end-radius: $radius-M;
-        border-end-end-radius: $radius-M;
-        opacity: 0;
-        transform: scaleX(0%);
-        transform-origin: right;
-        z-index: -1;
-        transition: transform 400ms ease-in, opacity 400ms ease-in;
+      &:last-child {
+        @include media ("tabletMediumAndUp") {
+          grid-column: 2 / span 2;
+        }
+
+        .menuCard__content {
+          padding-block-end: $space-XL;
+        }
+
+        @include media ("laptopAndUp") {
+          .menuCard__content {
+            padding-inline: 50px;
+          }
+        }
       }
 
-      // list item color on hover with opacity
-      &:hover {
+      // h3
+      &__heading {
+        text-transform: uppercase;
+        font-weight: $font-weight-regular;
+        margin-block-end: $space-XS * 1.2;
+        position: relative;
+
+        // green line under heading
         &::after {
-          opacity: 0.9;
-          transform: scaleX(0.17);
-          margin: auto;
+          @include green-line;
+        }
+      }
 
-          @include media ("tabletSmallAndUp") {
-            transform: scaleX(0.12);
-          }
+      &__list {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        gap: $space-XS;
 
-          @include media ("tabletMediumAndUp") {
-            transform: scaleX(0.10);
-          }
+        // Menu group of dish on the same row
+        @include media ("laptopAndUp") {
 
-          @include media ("laptopAndUp") {
-            transform: scaleX(0.18);
+          &>div {
+            width: 100%;
           }
         }
+      }
 
-        & .list__item__desc__wrapper div {
-          transform: translateX(-225%);
+      @keyframes menu-appear {
+        0% {
+          transform: translateY(30px);
+          opacity: 0;
+        }
 
-          @include media ("tabletSmallAndUp") {
-            transform: translateX(-310%);
-          }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
 
-          @include media ("laptopAndUp") {
-            transform: translateX(-265%);
-          }
+      @mixin menu-appear-delay() {
+        &:first-child {
+          animation: menu-appear 700ms 200ms ease-out both;
+        }
 
-          @include media ("desktopAndUp") {
-            transform: translateX(-300%);
+        &:nth-child(2) {
+          animation: menu-appear 700ms 400ms ease-out both;
+        }
+
+        &:nth-child(3) {
+          animation: menu-appear 700ms 600ms ease-out both;
+        }
+      }
+
+      &__list>div {
+        // menu appearance animation
+        @include menu-appear-delay;
+      }
+
+      &__list li {
+        position: relative;
+        height: $size-XXL * 0.9;
+        background: $col-white;
+        border-radius: $radius-M;
+        box-shadow: 2px 2px 10px 2px $col-grey-shadow;
+        z-index: 1;
+        overflow: hidden;
+
+        display: grid;
+        align-items: center;
+        padding-inline: $space-base * 1.1;
+
+        @include media ("tabletMediumAndUp") {
+          // so that the items occupy the entire width of the page
+          flex-grow: 1;
+        }
+
+        & h4 {
+          margin-block-end: $space-base * 0.7;
+        }
+
+        & article .list__item__desc__wrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: $font-size-S;
+          font-weight: $font-weight-bold;
+          margin-inline-end: $space-base * 1.5;
+
+          & div {
+            // for the item to reduce from the right when it's hovered
+            transform: translateX(0);
+            transition: transform 700ms;
           }
         }
 
         & p {
-          width: 67%;
+          font-size: $font-size-S;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        // @keyframes green-check {
+        //   0% {
+        //     transform: translateX(0) rotate(0);
+        //   }
+        //   100% {
+        //     transform: translateX(-3.85rem) rotate(1turn);
+        //   }
+        // }
+
+        &::before {
+          content: "\f058";
+          position: absolute;
+          right: -2.5rem;
+          color: $col-white;
+          display: inline-block;
+          font-style: normal;
+          font-variant: normal;
+          text-rendering: auto;
+          -webkit-font-smoothing: antialiased;
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          transform: translateX(0) rotate(0turn);
+          transition: transform 400ms ease-in, rotate 400ms;
+          z-index: 1;
+        }
+
+        &:hover {
+          &::before {
+            // animation: green-check 400ms ease-in-out forwards;
+            transform: translateX(-3.85rem) rotate(-1turn);
+
+            @include media ("tabletMediumAndUp") {
+              transform: translateX(-4.1rem) rotate(-1turn);
+            }
+
+            @include media ("laptopAndUp") {
+              transform: translateX(-4.2rem) rotate(-1turn);
+            }
+
+            @include media ("desktopAndUp") {
+              transform: translateX(-4.6rem) rotate(-1turn);
+            }
+          }
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: $col-tertiary;
+          border-start-end-radius: $radius-M;
+          border-end-end-radius: $radius-M;
+          opacity: 0;
+          transform: scaleX(0%);
+          transform-origin: right;
+          z-index: -1;
+          transition: transform 400ms ease-in, opacity 400ms ease-in;
+        }
+
+        // list item color on hover with opacity
+        &:hover {
+          &::after {
+            opacity: 0.9;
+            transform: scaleX(0.17);
+            margin: auto;
+
+            @include media ("tabletSmallAndUp") {
+              transform: scaleX(0.12);
+            }
+
+            @include media ("tabletMediumAndUp") {
+              transform: scaleX(0.10);
+            }
+
+            @include media ("laptopAndUp") {
+              transform: scaleX(0.18);
+            }
+          }
+
+          & .list__item__desc__wrapper div {
+            transform: translateX(-225%);
+
+            @include media ("tabletSmallAndUp") {
+              transform: translateX(-310%);
+            }
+
+            @include media ("laptopAndUp") {
+              transform: translateX(-265%);
+            }
+
+            @include media ("desktopAndUp") {
+              transform: translateX(-300%);
+            }
+          }
+
+          & p {
+            width: 67%;
+          }
         }
       }
     }
+
+    // ==== End section menuCard ====
+
+    // === Button (component) ===
+    @include button {
+      display: block;
+      margin-block-start: $space-M * 1.3;
+      margin-left: auto;
+      margin-right: auto;
+      padding-inline: $space-L * 1.1;
+    }
+
+    ;
+
   }
-
-  // ==== End section menuCard ====
-
-  // === Button (component) ===
-  @include button {
-    display: block;
-    margin-block-start: $space-M * 1.3;
-    margin-left: auto;
-    margin-right: auto;
-    padding-inline: $space-L * 1.1;
-  };
 }
