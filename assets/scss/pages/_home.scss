@@ -222,6 +222,11 @@
       @include media("desktopAndUp") {
         grid-template-columns: repeat(auto-fill, minmax(min(345px, 100%), 1fr));
       }
+
+      &>div {
+        overflow: hidden;
+        border-radius: $radius-L;
+      }
     }
 
     &__card {
@@ -233,7 +238,12 @@
       background-color: $col-white;
       border-radius: $radius-L;
       position: relative;
+      overflow: hidden;
       transition: transform 280ms ease-in-out;
+
+      &:hover {
+        transform: scale(1.03);
+      }
 
       &__wrapper {
         position: absolute;
@@ -244,11 +254,8 @@
         // radius around the card image
         border-radius: $radius-L;
         box-shadow: 1px 1px 10px 2px $col-grey-shadow;
-        overflow: hidden;
-
-        &:hover .restaurants__card {
-          transform: scale(1.015);
-        }
+        display: block;
+        transition: transform 280ms ease-in-out;
       }
 
       // restaurants card img
