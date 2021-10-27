@@ -40,4 +40,8 @@
   border-bottom: 3px solid $col-tertiary;
   display: block;
   padding-block-start: $space-base * 0.5;
+
+  @include media ("laptopAndUp") {
+    width: 3.3rem;
+  }
 }

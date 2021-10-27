@@ -39,11 +39,18 @@
         font-size: $font-size-XXL * 0.85;
         margin-block-end: $space-base * 1.5;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
+        position: relative;
+
+        @include media ("laptopAndUp") {
+          font-size: $font-size-XXL;
+          justify-content: center;
+        }
 
         span {
           position: relative;
           height: 25px;
+          left: $space-S * 1.2;
 
           &:hover>.menu-heart-icon-filled {
             animation: menu-heart-fill 350ms ease both;
@@ -139,11 +146,14 @@
       }
 
       &:first-child {
+        .menuCard__content {
+          padding-block-start: $space-XL;
+        }
+
         @include media ("tabletMediumAndUp") {
           grid-column: 1 / span 2;
 
           .menuCard__content {
-            padding-block-start: $space-L;
             padding-inline-end: 0;
           }
         }
@@ -154,7 +164,7 @@
           grid-column: 3 / span 2;
 
           .menuCard__content {
-            padding-block-start: $space-L;
+            padding-block-start: $space-XL;
             padding-inline-start: 0;
           }
         }
@@ -248,9 +258,17 @@
         align-items: center;
         padding-inline: $space-base * 1.1;
 
+        @include media ("tabletSmallAndUp") {
+          height: $size-XXL;
+        }
+
         @include media ("tabletMediumAndUp") {
           // so that the items occupy the entire width of the page
           flex-grow: 1;
+        }
+
+        @include media ("laptopAndUp") {
+          padding-inline: $space-XS;
         }
 
         & h4 {
@@ -393,9 +411,12 @@
       margin-left: auto;
       margin-right: auto;
       padding-inline: $space-L * 1.1;
+      height: $size-XL * 1.1;
+
+      @include media ("laptopAndUp") {
+        padding-inline: $space-L * 1.2;
+        height: $size-XL * 1.2;
+      }
     }
-
-    ;
-
   }
 }
