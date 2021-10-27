@@ -146,6 +146,10 @@
         &::after {
           opacity: 1;
         }
+
+        & i {
+          color: $col-primary;
+        }
       }
 
       &::after {
@@ -174,10 +178,6 @@
         @include media ("laptopAndUp") {
           font-size: $font-size-L * 1.1;
         }
-      }
-
-      &:last-child i {
-        color: $col-primary;
       }
 
       span {
