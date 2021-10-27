@@ -17,6 +17,21 @@
       &__img {
         object-fit: cover;
         width: 100%;
+
+        @include media ("tabletMediumAndUp") {
+          height: 420px;
+          object-position: 50% 75%;
+        }
+
+        @include media ("laptopAndUp") {
+          height: 480px;
+          object-position: 50% 70%;
+        }
+
+        @include media ("desktopAndUp") {
+          height: 560px;
+          object-position: 50% 62%;
+        }
       }
     }
 
