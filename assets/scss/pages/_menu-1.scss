@@ -342,7 +342,8 @@
           -webkit-font-smoothing: antialiased;
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
-          transform: translateX(0) rotate(0turn);
+          font-size: $font-size-L;
+          transform: translateX(0) rotate(0);
           transition: transform 400ms ease-in, rotate 400ms;
           z-index: 1;
         }
