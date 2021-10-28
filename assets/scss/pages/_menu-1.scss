@@ -251,16 +251,15 @@
       }
 
       @mixin menu-appear-delay() {
-        &:first-child {
-          animation: menu-appear 700ms 200ms ease-out both;
-        }
+        $delay: 200ms;
+        $child: 1;
 
-        &:nth-child(2) {
-          animation: menu-appear 700ms 400ms ease-out both;
-        }
-
-        &:nth-child(3) {
-          animation: menu-appear 700ms 600ms ease-out both;
+        @for $i from 1 to 4 {
+          &:nth-child(#{$child}) {
+            animation: menu-appear 700ms #{$delay} ease-out both;
+            $delay: $delay + 200ms;
+            $child: $child + 1;
+          }
         }
       }
 
@@ -379,6 +378,7 @@
             transform: translateX(0);
             margin: auto;
           }
+
           // price translate on the left
           & .list__item__desc__wrapper div {
             transform: translateX(-60px);
