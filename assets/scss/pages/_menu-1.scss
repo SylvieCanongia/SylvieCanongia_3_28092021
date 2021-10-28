@@ -308,7 +308,7 @@
           margin-inline-end: $space-base * 1.5;
 
           & div {
-            // for the item to reduce from the right when it's hovered
+            // for the price to translate on the left when the item is hovered
             transform: translateX(0);
             transition: transform 700ms;
           }
@@ -326,7 +326,7 @@
         //     transform: translateX(0) rotate(0);
         //   }
         //   100% {
-        //     transform: translateX(-3.85rem) rotate(1turn);
+        //     transform: translateX(-60px) rotate(1turn);
         //   }
         // }
 
@@ -351,19 +351,7 @@
         &:hover {
           &::before {
             // animation: green-check 400ms ease-in-out forwards;
-            transform: translateX(-3.85rem) rotate(-1turn);
-
-            @include media ("tabletMediumAndUp") {
-              transform: translateX(-4.1rem) rotate(-1turn);
-            }
-
-            @include media ("laptopAndUp") {
-              transform: translateX(-4.2rem) rotate(-1turn);
-            }
-
-            @include media ("desktopAndUp") {
-              transform: translateX(-4.6rem) rotate(-1turn);
-            }
+            transform: translateX(-60px) rotate(-1turn);
           }
         }
 
@@ -374,13 +362,12 @@
           top: 0;
           right: 0;
           bottom: 0;
-          left: 0;
           background: $col-tertiary;
           border-start-end-radius: $radius-M;
           border-end-end-radius: $radius-M;
-          opacity: 0;
-          transform: scaleX(0%);
-          transform-origin: right;
+          opacity: 1;
+          width: 60px;
+          transform: translateX(100%);
           z-index: -1;
           transition: transform 400ms ease-in, opacity 400ms ease-in;
         }
@@ -389,40 +376,12 @@
         &:hover {
           &::after {
             opacity: 0.9;
-            transform: scaleX(0.17);
+            transform: translateX(0);
             margin: auto;
-
-            @include media ("tabletSmallAndUp") {
-              transform: scaleX(0.12);
-            }
-
-            @include media ("tabletMediumAndUp") {
-              transform: scaleX(0.16);
-            }
-
-            @include media ("desktopAndUp") {
-              transform: scaleX(0.16);
-            }
           }
-
+          // price translate on the left
           & .list__item__desc__wrapper div {
-            transform: translateX(-225%);
-
-            @include media ("tabletSmallAndUp") {
-              transform: translateX(-310%);
-            }
-
-            @include media ("tabletMediumAndUp") {
-              transform: translateX(-320%);
-            }
-
-            @include media ("laptopAndUp") {
-              transform: translateX(-300%);
-            }
-
-            @include media ("desktopAndUp") {
-              transform: translateX(-340%);
-            }
+            transform: translateX(-60px);
           }
 
           & p {
