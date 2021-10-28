@@ -17,20 +17,26 @@
       &__img {
         object-fit: cover;
         width: 100%;
+        height: 260px;
+
+        @include media ("tabletSmallAndUp") {
+          height: 330px;
+          object-position: 50% 65%;
+        }
 
         @include media ("tabletMediumAndUp") {
-          height: 420px;
-          object-position: 50% 75%;
+          height: 440px;
+          object-position: 50% 60%;
         }
 
         @include media ("laptopAndUp") {
-          height: 480px;
-          object-position: 50% 70%;
+          height: 500px;
+          object-position: 50% 60%;
         }
 
         @include media ("desktopAndUp") {
           height: 560px;
-          object-position: 50% 62%;
+          object-position: 50% 60%;
         }
       }
     }
@@ -400,11 +406,11 @@
       margin-left: auto;
       margin-right: auto;
       padding-inline: $space-L * 1.1;
-      height: $size-XL * 1.1;
+      height: $size-L * 1.1;
 
       @include media ("laptopAndUp") {
         padding-inline: $space-L * 1.2;
-        height: $size-XL * 1.2;
+        height: $size-L * 1.4;
       }
     }
   }

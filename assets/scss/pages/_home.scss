@@ -227,6 +227,37 @@
         overflow: hidden;
         border-radius: $radius-L;
       }
+
+      & img {
+        height: 165px;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+
+        @include media ("tabletSmallAndUp") {
+          height: 240px;
+          object-position: 50% 80%;
+        }
+
+        @include media ("tabletMediumAndUp") {
+          height: 210px;
+          object-position: 50% 75%;
+        }
+
+        @include media("laptopAndUp") {
+          height: 230px;
+          object-position: 50% 70%;
+        }
+      }
+
+      // // centering of the 2nd img
+      // &:nth-child(2) img {
+      //   object-position: 50% 60%;
+      // }
+
+      // &:nth-child(4) img {
+      //   object-position: 50% 70%;
+      // }
     }
 
     &__card {
@@ -305,7 +336,7 @@
       }
 
       // centering of the 2nd img
-      &__wrapper:nth-child(2) img {
+      & img.note-enchantee {
         object-position: 50% 60%;
       }
 
