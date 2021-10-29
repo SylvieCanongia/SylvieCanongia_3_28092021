@@ -262,14 +262,14 @@
 
         @for $i from 1 to 4 {
           &:nth-child(#{$child}) {
-            animation: menu-appear 700ms #{$delay} ease-out both;
+            animation: menu-appear 700ms #{$delay } ease-out both;
             $delay: $delay + 200ms;
             $child: $child + 1;
           }
         }
       }
 
-      &__list>div {
+      &__list li {
         // menu appearance animation
         @include menu-appear-delay;
       }
