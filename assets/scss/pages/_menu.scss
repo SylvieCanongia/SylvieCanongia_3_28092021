@@ -260,7 +260,7 @@
         $delay: 200ms;
         $child: 1;
 
-        @for $i from 1 to 4 {
+        @for $i from 1 to 5 {
           &:nth-child(#{$child}) {
             animation: menu-appear 700ms #{$delay } ease-out both;
             $delay: $delay + 200ms;
