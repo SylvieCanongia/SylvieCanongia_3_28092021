@@ -346,15 +346,19 @@
           -webkit-font-smoothing: antialiased;
           font-family: "Font Awesome 5 Free";
           font-weight: 900;
-          font-size: $font-size-L;
+          font-size: $font-size-XL;
           transform: translateX(0) rotate(0);
-          transition: transform 400ms ease-in, rotate 400ms;
+          transition: transform 400ms ease-in, rotate 1000ms;
           z-index: 1;
         }
 
         &:hover {
           &::before {
-            transform: translateX(-60px) rotate(-1turn);
+            transform: translateX($size-XXL * -0.85) rotate(-1turn);
+
+            @include media ("tabletSmallAndUp") {
+              transform: translateX($size-XXL * -0.9) rotate(-1turn);
+            }
           }
         }
 
@@ -369,10 +373,16 @@
           border-start-end-radius: $radius-M;
           border-end-end-radius: $radius-M;
           opacity: 1;
-          width: 60px;
+          // same width as the 'li' height
+          width: $size-XXL * 0.9;
           transform: translateX(100%);
           z-index: -1;
           transition: transform 400ms ease-in, opacity 400ms ease-in;
+
+          // same width as the 'li' height
+          @include media ("tabletSmallAndUp") {
+            width: $size-XXL;
+          }
         }
 
         // list item green background color on hover
@@ -383,9 +393,14 @@
             margin: auto;
           }
 
-          // price translate on the left
+          // price translate on the left - same value as the green background
           & .list__item__desc__wrapper div {
-            transform: translateX(-60px);
+            transform: translateX(($size-XXL * 0.9) * -1);
+
+            @include media ("tabletSmallAndUp") {
+              transform: translateX($size-XXL * -1);
+            }
+
           }
 
           // to trigger the ellipsis on h4 and p when hovering
