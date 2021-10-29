@@ -325,6 +325,9 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          width: 100%;
+          transition: width 400ms ease-out;
+          transform-origin: left;
         }
 
         & p {
@@ -332,6 +335,9 @@
           overflow: hidden;
           white-space: nowrap;
           text-overflow: ellipsis;
+          width: 100%;
+          transform-origin: left;
+          transition: width 400ms ease-out;
         }
 
         &::before {
