@@ -6,13 +6,13 @@
   "author": "Sylvie Canongia <sylvie.canongia.dev@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel index.html",
     "build-dev": "parcel build ./index.html --no-minify --public-url ./",
     "build": "parcel build index.html",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "devDependencies": {
     "cssnano": "^5.0.8",
+    "parcel": "^2.6.2",
     "postcss": "^8.2.15",
     "sass": "^1.42.1"
   },
